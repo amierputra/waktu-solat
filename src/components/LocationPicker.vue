@@ -18,7 +18,7 @@ const zonesStore = useZonesStore()
   <div class="relative w-full max-w-md">
     <Select v-model="zonesStore.selectedCode">
       <SelectTrigger
-        class="w-full bg-white/5 dark:bg-black/20 border-white/20 dark:border-white/10 rounded-2xl py-6 pl-12 h-auto text-lg focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-md transition-all hover:bg-white/10 dark:hover:bg-black/30"
+        class="w-full bg-white/70 dark:bg-black/20 border-black/10 dark:border-white/10 rounded-2xl py-6 pl-12 h-auto text-lg focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-xl transition-all hover:bg-white/90 dark:hover:bg-black/30 shadow-sm"
       >
         <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
           <MapPin class="h-5 w-5 text-primary" />

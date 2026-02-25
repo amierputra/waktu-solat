@@ -12,8 +12,8 @@ defineProps<{
 
 <template>
   <Card
-    class="glass-card flex flex-col items-center justify-center border-none shadow-none p-0 overflow-hidden"
-    :class="{ 'ring-2 ring-primary bg-primary/20 scale-105': isActive }"
+    class="glass-card flex flex-col items-center justify-center p-0 overflow-hidden"
+    :class="{ 'ring-2 ring-primary bg-primary/20 scale-105 shadow-lg': isActive }"
   >
     <CardContent class="flex flex-col items-center justify-center gap-3 p-6 text-center">
       <component

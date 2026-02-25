@@ -127,7 +127,7 @@ const timeToNext = computed(() => {
     <!-- Hero Next Prayer -->
     <Card
       v-if="nextPrayer"
-      class="glass-card border-none shadow-xl dark:shadow-none bg-primary/15 dark:bg-primary/10 relative overflow-hidden group rounded-2xl"
+      class="glass-card bg-primary/15 dark:bg-primary/10 relative overflow-hidden group rounded-2xl shadow-xl dark:shadow-none"
     >
       <div
         class="absolute -right-12 -bottom-12 opacity-5 dark:opacity-5 transition-transform group-hover:scale-110 duration-700 pointer-events-none"
@@ -195,7 +195,7 @@ const timeToNext = computed(() => {
         </div>
         Jadual Bulanan
       </h3>
-      <Card class="glass rounded-3xl overflow-hidden border border-white/10 shadow-none">
+      <Card class="glass rounded-3xl overflow-hidden shadow-none lg:shadow-md dark:shadow-none">
         <div class="overflow-x-auto">
           <Table>
             <TableHeader>
