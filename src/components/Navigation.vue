@@ -17,18 +17,6 @@ const items = [
     href: '/',
     trigger: false,
   },
-  {
-    id: 2,
-    label: 'Dashboard',
-    href: '/dashboard',
-    trigger: false,
-  },
-  {
-    id: 3,
-    label: 'Settings',
-    href: '/settings',
-    trigger: false,
-  },
 ]
 </script>
 
@@ -37,13 +25,17 @@ const items = [
     <NavigationMenuList>
       <template v-for="item in items" :key="item.id">
         <NavigationMenuItem v-if="item.trigger">
-          <NavigationMenuTrigger>{{ item.label }}</NavigationMenuTrigger>
+          <NavigationMenuTrigger>
+            <span class="text-xl">{{ item.label }}</span>
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <NavigationMenuLink :href="item.href">Link</NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem v-else>
-          <NavigationMenuLink :href="item.href">{{ item.label }}</NavigationMenuLink>
+          <NavigationMenuLink :href="item.href">
+            <span class="text-xl">{{ item.label }}</span>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </template>
     </NavigationMenuList>

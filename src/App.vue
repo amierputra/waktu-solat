@@ -10,7 +10,7 @@ import Navigation from '@/components/Navigation.vue'
       <ModeToggle />
     </nav>
   </div>
-  <main class="p-4">
+  <main class="p-4 flex justify-center w-full">
     <router-view />
   </main>
 </template>
