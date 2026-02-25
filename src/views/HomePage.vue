@@ -161,7 +161,7 @@ const timeToNext = computed(() => {
             class="text-muted-foreground dark:text-muted-foreground font-bold uppercase text-[10px] md:text-xs tracking-widest"
             >Akan datang dalam</span
           >
-          <div class="text-4xl md:text-5xl font-mono font-black tracking-tighter text-primary">
+          <div class="text-2xl md:text-5xl font-mono font-black tracking-tighter text-primary">
             {{ timeToNext }}
           </div>
         </div>
