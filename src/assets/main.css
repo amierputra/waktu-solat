@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -43,7 +44,8 @@
 
 :root {
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.985 0 0);
+  /* Off-white for better depth */
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -116,7 +118,15 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'Outfit', 'Poppins', sans-serif;
+  }
+
+  .glass {
+    @apply bg-white/40 dark:bg-black/20 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-lg dark:shadow-2xl;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-6 transition-all duration-300 hover:scale-[1.01] hover:shadow-xl dark:hover:shadow-primary/5;
   }
 }
