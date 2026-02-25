@@ -127,6 +127,6 @@
   }
 
   .glass-card {
-    @apply glass rounded-2xl p-6 transition-all duration-300 hover:scale-[1.01] hover:shadow-xl dark:hover:shadow-primary/5 hover:bg-white/90 dark:hover:bg-black/30;
+    @apply bg-white/70 dark:bg-black/20 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-md dark:shadow-2xl rounded-2xl p-6 transition-all duration-300 hover:scale-[1.01] hover:shadow-xl dark:hover:shadow-primary/5 hover:bg-white/90 dark:hover:bg-black/30;
   }
 }

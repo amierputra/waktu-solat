@@ -95,8 +95,8 @@ const timeToNext = computed(() => {
 <template>
   <div class="w-full max-w-5xl flex flex-col gap-12 py-8 animate-in fade-in duration-700">
     <!-- Header Section -->
-    <header class="flex flex-col md:flex-row justify-between items-end gap-6">
-      <div class="flex flex-col gap-2">
+    <header class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6">
+      <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
         <div class="flex items-center gap-2">
           <Badge
             variant="outline"
@@ -193,7 +193,8 @@ const timeToNext = computed(() => {
         <div class="p-2 glass rounded-lg">
           <CalendarIcon class="h-5 w-5 text-primary" />
         </div>
-        Jadual Bulanan
+        Jadual Bulanan {{ prayerTimeStore.prayerTime?.month }}
+        {{ prayerTimeStore.prayerTime?.year }}
       </h3>
       <Card class="glass rounded-3xl overflow-hidden shadow-none lg:shadow-md dark:shadow-none">
         <div class="overflow-x-auto">
