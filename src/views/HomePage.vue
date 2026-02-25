@@ -19,7 +19,6 @@ import { usePrayerTimeFormat } from '@/composables/usePrayerTimeFormat'
 const { formatHijriDate, formatMasihiDate, formatUnixTime } = usePrayerTimeFormat()
 
 const today = new Date()
-
 const isToday = (day: string): boolean => {
   const pt = prayerTimeStore.prayerTime
   if (!pt) return false
@@ -48,7 +47,7 @@ watch(
 
 <template>
   <div class="flex flex-col justify-center items-center gap-4 w-2/3">
-    <h1>Waktu Solat</h1>
+    <h1 class="text-4xl">Waktu Solat</h1>
     <NativeSelect v-model="zonesStore.selectedCode" class="w-96">
       <NativeSelectOption
         v-for="zone in zonesStore.zones"
@@ -60,11 +59,11 @@ watch(
     </NativeSelect>
     <div class="w-full">
       <Table>
-        <TableCaption>Prayer times</TableCaption>
+        <TableCaption>Waktu Solat</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead>Day</TableHead>
-            <TableHead>Hijri</TableHead>
+            <TableHead>Hari</TableHead>
+            <TableHead>Tarikh Hijrah</TableHead>
             <TableHead>Subuh</TableHead>
             <TableHead>Syuruk</TableHead>
             <TableHead>Zohor</TableHead>
@@ -87,7 +86,7 @@ watch(
             <TableRow
               v-for="prayer in prayerTimeStore.prayerTime.prayers"
               :key="prayer.day"
-              :class="isToday(prayer.day) ? 'bg-primary/10 font-semibold' : ''"
+              :class="isToday(prayer.day) ? 'bg-primary/40 font-semibold' : ''"
             >
               <TableCell>{{
                 formatMasihiDate(

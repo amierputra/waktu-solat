@@ -13,7 +13,7 @@ import {
 const items = [
   {
     id: 1,
-    label: 'Home',
+    label: 'Utama',
     href: '/',
     trigger: false,
   },
@@ -29,7 +29,7 @@ const items = [
             <span class="text-xl">{{ item.label }}</span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink :href="item.href">Link</NavigationMenuLink>
+            <NavigationMenuLink :href="item.href">{{ item.label }}</NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem v-else>
